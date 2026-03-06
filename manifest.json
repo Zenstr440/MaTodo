@@ -1,8 +1,8 @@
 {
   "name": "NomDuProjet",
   "short_name": "Nom",
-  "start_url": "./",
-  "scope": "./",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4CAF50",

@@ -1,10 +1,10 @@
 const CACHE_NAME = "lotto-pwa-cache";
 const urlsToCache = [
-  "./",
-  "./index.html",
-  "./ Reminder.css",
-  "./ Reminder.js",
-  "./manifest.json"
+  "/",
+  "/index.html",
+  "/Reminder.css",
+  "/Reminder.js",
+  "/manifest.json"
 ];
 
 self.addEventListener("install", event => {
