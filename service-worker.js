@@ -1,7 +1,7 @@
 const CACHE_NAME = "lotto-pwa-cache";
 const urlsToCache = [
   "./",
-  "./Reminder.html",
+  "./index.html",
   "./ Reminder.css",
   "./ Reminder.js",
   "./manifest.json"
