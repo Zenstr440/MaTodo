@@ -1,5 +1,5 @@
-const CACHE_NAME = "lotto-pwa-cache";
-const urlsToCache = ["/", "/index.html", "/Reminder.css", "/Reminder.js", "/manifest.json"];
+const CACHE_NAME = "matodo-pwa-cache-v2";
+const urlsToCache = ["/MaTodo/", "/MaTodo/index.html", "/MaTodo/Reminder.css", "/MaTodo/Reminder.js", "/MaTodo/manifest.json"];
 
 self.addEventListener("install", (event) => {
      event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache)));

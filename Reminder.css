@@ -174,7 +174,7 @@ input:hover {
      color: #ffffff;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 768px) {
      #list-container {
           flex-direction: column;
           margin: 0;
