@@ -31,9 +31,23 @@ function valid(node) {
     let countElement = document.getElementById("count");
     let count = parseInt(countElement.innerText) || 0;
     countElement.innerText = count + 1;
+
+    const accomplished = document.getElementById("acc-wrapper");
+    accomplished.classList.remove("hidden");
+
 }
 function delet() {
+    if (!confirm("Are you sure you want to delete that reminder ?")) return;
     event.target.closest("li").remove();
+}
+function resetCount() {
+    if (document.querySelector("#list-ok li")) {
+        alert("Please delete all the completed reminders before resetting the count.");
+        return;
+    }
+    if (!confirm("Are you sure you want to reset the count?")) return;
+    document.getElementById("count").innerText = "0";
+    document.getElementById("acc-wrapper").classList.add("hidden");
 }
 function displaymode() {
     document.body.classList.toggle("display")
