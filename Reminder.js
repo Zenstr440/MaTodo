@@ -7,11 +7,10 @@ function add() {
     if (remind.value === "") { alert("Please enter a remind"); return; };
     if (dateInputValue === "") { alert("Please enter a date"); return; };
 
-    const modelContent = document.querySelector('#model-container').innerHTML;
     let slicedText = (remind.value.length > max) ? remind.value.slice(0, max) + "..." : remind.value;
 
+    const modelContent = document.querySelector('#model-container').innerHTML;
     const finalHTML = modelContent.replace("##input##", slicedText).replace('##date##', dateInputValue);
-
     const newLi = document.createElement("li");
     newLi.innerHTML = finalHTML;
 
@@ -19,13 +18,11 @@ function add() {
         const titleElement = newLi.querySelector("#model-remind");
         if (titleElement) titleElement.title = remind.value;
     }
-
     document.getElementById("list-nok").appendChild(newLi);
 
     remind.value = "";
     document.getElementById('dateInput').valueAsDate = new Date();
 }
-
 function valid(node) {
     const contentToMove = node.closest('li')
     document.getElementById("list-ok").appendChild(contentToMove);
