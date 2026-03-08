@@ -1,275 +1,267 @@
 * {
-    font-family: 'Wix Madefor Display', -apple-system, sans-serif;
-    box-sizing: border-box;
+     font-family:
+          "Wix Madefor Display",
+          -apple-system,
+          sans-serif;
+     box-sizing: border-box;
 }
 
 body {
-    background-color: white;
-    transition: all 0.3s ease;
-    margin: 20px;
+     background-color: white;
+     transition: all 0.3s ease;
+     margin: 20px;
 }
 
 .style {
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    padding: 8px 10px;
-    background-color: white;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
+     border: 2px solid #ddd;
+     border-radius: 10px;
+     padding: 8px 10px;
+     background-color: white;
+     outline: none;
+     cursor: pointer;
+     transition: all 0.2s ease;
 }
 
 #textInput {
-    width: 200px;
+     width: 200px;
 }
 
 #dateInput {
-    width: 150px;
+     width: 150px;
 }
 
 input:hover {
-    cursor: text;
+     cursor: text;
 }
 
 .homeButtons {
-    margin-left: 2px;
-    display: inline-flex;
-    vertical-align: middle;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(-1px);
-    width: 38px;
-    height: 38px;
-    padding: 0;
+     margin-left: 2px;
+     display: inline-flex;
+     vertical-align: middle;
+     justify-content: center;
+     align-items: center;
+     transform: translateY(-1px);
+     width: 38px;
+     height: 38px;
+     padding: 0;
 }
 
 #accomplished,
 #count {
-    position: absolute;
-    right: 250px;
-    top: 150px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #34C759;
-    margin: 0;
+     position: absolute;
+     right: 250px;
+     top: 150px;
+     font-size: 20px;
+     font-weight: bold;
+     color: #34c759;
+     margin: 0;
 }
 
 #count {
-    transform: translateX(17px) translateY(1px);
+     transform: translateX(17px) translateY(1px);
 }
 
 .reset {
-    position: absolute;
-    right: 250px;
-    top: 150px;
-    margin: 0;
-    transform: translateX(80px) translateY(0px);
-    width: 50px;
-    height: 30px;
+     position: absolute;
+     right: 250px;
+     top: 150px;
+     margin: 0;
+     transform: translateX(80px) translateY(0px);
+     width: 50px;
+     height: 30px;
 }
 
-
 #list-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: row;
-    margin-top: 5px;
+     display: flex;
+     justify-content: flex-start;
+     align-items: flex-start;
+     flex-direction: row;
+     margin-top: 5px;
 }
 
 #list-ok {
-    background-color: #34C759;
-    list-style-type: none;
-    margin-left: auto;
-    margin-right: 60px;
-    margin-top: 10px;
+     background-color: #34c759;
+     list-style-type: none;
+     margin-left: auto;
+     margin-right: 60px;
+     margin-top: 10px;
 }
 
 .list:has(li) {
-    margin: 0px;
-    padding: 0em 0em;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border-radius: 1em;
-    list-style-type: none;
+     margin: 0px;
+     padding: 0em 0em;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+     border-radius: 1em;
+     list-style-type: none;
 }
 
 .model-line {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    margin-left: 10px;
-    margin-right: 7px;
-    max-width: 500px;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     margin: 5px 7px 5px 10px;
+     max-width: 500px;
 }
 
 .model-remind {
-    width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    margin-left: 10px;
+     width: 200px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     margin-left: 10px;
 }
 
 .model-date {
-    width: 100px;
+     width: 100px;
 }
 
 .trash {
-    margin-left: 20px;
+     margin-left: 20px;
 }
 
 .valid {
-    margin-left: 10px;
+     margin-left: 10px;
+}
+
+.valid svg,
+.trash svg {
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 .trash svg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FF3B30;
+     color: #ff3b30;
 }
 
 .valid svg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #34C759;
+     color: #34c759;
 }
 
 .display {
-    background-color: #000000 !important;
-    color: #FFFFFF !important;
+     background-color: #000000 !important;
+     color: #ffffff !important;
 }
 
 .display button {
-    background-color: #2C2C2E !important;
-    border: 2px solid #38383A;
-    color: #FFFFFF;
+     background-color: #2c2c2e !important;
+     border: 2px solid #38383a;
+     color: #ffffff;
 }
 
 .display input.style {
-    background-color: #1C1C1E;
-    border: 2px solid #38383A;
-    color: #FFFFFF;
-    color-scheme: dark;
+     background-color: #1c1c1e;
+     border: 2px solid #38383a;
+     color: #ffffff;
+     color-scheme: dark;
 }
 
 .display .trash svg {
-    color: #FF453A;
+     color: #ff453a;
 }
 
 .display #accomplished,
 .display #count,
 .display.valid svg {
-    color: #32D74B;
+     color: #32d74b;
 }
 
 .display #list-ok {
-    background-color: #32D74B;
-    color: #FFFFFF;
-}
-
-.display .accomplished,
-#count {
-    color: #32D74B;
+     background-color: #32d74b;
+     color: #ffffff;
 }
 
 @media (max-width: 430px) {
-    #list-container {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-    }
+     #list-container {
+          flex-direction: column;
+          margin: 0;
+     }
 
-    #textInput {
-        width: 130px;
-    }
+     #textInput {
+          width: 130px;
+     }
 
-    #dateInput {
-        width: 140px;
-    }
+     #dateInput {
+          width: 140px;
+     }
 
-    .model-line {
-        max-width: 400px;
-        margin-left: 10px;
-        margin-top: 5px;
-        margin-bottom: 0px;
-    }
+     .model-line {
+          max-width: 400px;
+          margin-left: 10px;
+          margin-top: 5px;
+          margin-bottom: 0px;
+     }
 
-    .model-remind {
-        width: 130px;
-    }
+     .model-remind {
+          width: 130px;
+     }
 
-    .trash {
-        margin-left: 10px;
-    }
+     .trash {
+          margin-left: 10px;
+     }
 
-    #acc-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
-        margin-left: 5px;
-        margin-bottom: 10px;
-    }
+     #acc-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 10px;
+          margin-left: 5px;
+          margin-bottom: 10px;
+     }
 
-    #accomplished {
-        position: static;
-        display: inline;
-        text-align: center;
-        order: 2;
-    }
+     #accomplished {
+          position: static;
+          display: inline;
+          text-align: center;
+     }
 
-    #count {
-        position: static;
-        display: inline;
-        text-align: center;
-        transform: translateX(4px);
-        order: 2;
-    }
+     #count {
+          position: static;
+          display: inline;
+          text-align: center;
+          transform: translateX(4px);
+     }
 
-    .reset {
-        position: static;
-        transform: translateX(0px);
-        order: 2;
-        margin-left: 10px;
-    }
+     .reset {
+          position: static;
+          transform: translateX(0px);
+          order: 2;
+          margin-left: 10px;
+     }
 
-    #list-nok {
-        order: 1;
-        margin: 0;
-        padding: 0;
-    }
+     #list-nok {
+          order: 1;
+          margin: 0;
+          padding: 0;
+     }
 
-    #list-nok:has(li) {
-        margin-top: 5px;
-    }
+     #list-nok:has(li) {
+          margin-top: 5px;
+     }
 
-    #list-ok {
-        order: 3;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0px;
-    }
+     #list-ok {
+          order: 3;
+          margin-left: 0;
+          margin-right: 0;
+          margin-top: 0px;
+     }
 
-    #list-ok .model-line {
-        margin-bottom: 5px;
-    }
+     #list-ok .model-line {
+          margin-bottom: 5px;
+     }
 
-    #list-ok .model-remind {
-        width: 170px;
-    }
+     #list-ok .model-remind {
+          width: 170px;
+     }
 
-    #list-ok .trash {
-        margin-left: 20px;
-    }
+     #list-ok .trash {
+          margin-left: 20px;
+     }
 }
 
 .hidden {
-    display: none !important;
+     display: none !important;
 }
