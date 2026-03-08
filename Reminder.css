@@ -4,6 +4,7 @@
           -apple-system,
           sans-serif;
      box-sizing: border-box;
+     user-select: none;
 }
 
 body {
@@ -22,6 +23,10 @@ body {
      transition: all 0.2s ease;
 }
 
+input:hover {
+     cursor: text;
+}
+
 #textInput {
      width: 200px;
 }
@@ -30,8 +35,8 @@ body {
      width: 150px;
 }
 
-input:hover {
-     cursor: text;
+#add {
+     width: 60px;
 }
 
 .homeButtons {
@@ -175,32 +180,120 @@ input:hover {
 }
 
 @media (max-width: 768px) {
+     body {
+          font-size: 3.5vw;
+     }
+
+     .style {
+          padding: 1.5vw 2vw;
+          font-size: 3.5vw;
+     }
+
+     input:hover {
+          cursor: text;
+     }
+
+     #textInput {
+          width: 30vw;
+          height: 8.8vw;
+     }
+
+     #dateInput {
+          width: 32.5vw;
+          height: 8.8vw;
+     }
+
+     #add {
+          width: 14vw;
+          height: 9vw;
+     }
+
+     .homeButtons {
+          width: 9vw;
+          height: 9vw;
+          padding: 1.5vw;
+     }
+
+     #moon,
+     #sun {
+          width: 7vw;
+          height: 5.8vw;
+     }
+
+     #accomplished,
+     #count {
+          position: static;
+          display: inline;
+          text-align: center;
+     }
+
+     #count {
+          transform: translateX(4px);
+     }
+
+     .reset {
+          position: static;
+          transform: none;
+          order: 2;
+          width: 11.6vw;
+          height: 7vw;
+          margin-left: 2.3vw;
+     }
+
      #list-container {
           flex-direction: column;
           margin: 0;
      }
 
-     #textInput {
-          width: 130px;
+     #list-ok {
+          order: 3;
+          margin-left: 0;
+          margin-right: 0;
+          margin-top: 0px;
      }
 
-     #dateInput {
-          width: 140px;
+     .list:has(li) {
+          list-style-type: none;
      }
 
      .model-line {
-          max-width: 400px;
-          margin-left: 10px;
+          max-width: 93vw;
+          margin-left: 2.3vw;
           margin-top: 5px;
           margin-bottom: 0px;
+          font-size: 3.5vw;
      }
 
      .model-remind {
-          width: 130px;
+          width: 31.3vw;
+     }
+
+     .model-date {
+          width: 23.3vw;
      }
 
      .trash {
-          margin-left: 10px;
+          margin-left: 2.3vw;
+     }
+
+     .valid {
+          margin-left: 2.3vw;
+     }
+
+     .valid svg,
+     .trash svg {
+          width: 4.6vw;
+          height: 4.6vw;
+     }
+
+     .model-line > svg {
+          width: 4.8vw;
+          height: 4.8vw;
+     }
+
+     .display {
+          background-color: #000000 !important;
+          color: #ffffff !important;
      }
 
      #acc-wrapper {
@@ -208,28 +301,8 @@ input:hover {
           justify-content: center;
           align-items: center;
           margin-top: 10px;
-          margin-left: 5px;
+          margin-left: 1.2vw;
           margin-bottom: 10px;
-     }
-
-     #accomplished {
-          position: static;
-          display: inline;
-          text-align: center;
-     }
-
-     #count {
-          position: static;
-          display: inline;
-          text-align: center;
-          transform: translateX(4px);
-     }
-
-     .reset {
-          position: static;
-          transform: translateX(0px);
-          order: 2;
-          margin-left: 10px;
      }
 
      #list-nok {
@@ -242,23 +315,16 @@ input:hover {
           margin-top: 5px;
      }
 
-     #list-ok {
-          order: 3;
-          margin-left: 0;
-          margin-right: 0;
-          margin-top: 0px;
-     }
-
      #list-ok .model-line {
           margin-bottom: 5px;
      }
 
      #list-ok .model-remind {
-          width: 170px;
+          width: 39.5vw;
      }
 
      #list-ok .trash {
-          margin-left: 20px;
+          margin-left: 4.6vw;
      }
 }
 
