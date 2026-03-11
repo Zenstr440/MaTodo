@@ -48,7 +48,18 @@ function add() {
 
      remind.value = "";
      document.getElementById("dateInput").valueAsDate = new Date();
+     sortByDate();
      save();
+}
+function sortByDate() {
+     const list = document.getElementById("list-nok");
+     const items = Array.from(list.querySelectorAll("li"));
+     items.sort((a, b) => {
+          const dateA = a.querySelector(".model-date").innerText.split("/").reverse().join("");
+          const dateB = b.querySelector(".model-date").innerText.split("/").reverse().join("");
+          return dateA - dateB;
+     });
+     items.forEach((item) => list.appendChild(item));
 }
 function valid(node) {
      const contentToMove = node.closest("li");
@@ -86,7 +97,6 @@ function displaymode() {
      sun.classList.toggle("hidden");
      moon.classList.toggle("hidden");
      localStorage.setItem("theme", document.body.classList.contains("display") ? "dark" : "light");
-     save();
      document.querySelector('link[rel="manifest"]').href = document.body.classList.contains("display") ? "manifest-dark.json" : "manifest.json";
 }
 function save() {

@@ -6,10 +6,17 @@
      box-sizing: border-box;
      user-select: none;
 }
+html {
+     overflow: hidden;
+     height: 100%;
+}
 body {
      background-color: white;
      transition: all 0.3s ease;
-     margin: 20px;
+     overflow-y: auto;
+     height: 100%;
+     box-sizing: border-box;
+     padding-top: 20px;
 }
 .style {
      border: 2px solid #ddd;
@@ -223,7 +230,7 @@ h1 {
           position: static;
           transform: none;
           order: 2;
-          width: 11.6vw;
+          width: 14vw;
           height: 7vw;
           margin-left: 2.3vw;
      }
