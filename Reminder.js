@@ -9,6 +9,12 @@ function load() {
           document.getElementById("count").innerText = count;
           if (parseInt(count) > 0) document.getElementById("acc-wrapper").classList.remove("hidden");
      }
+     const theme = localStorage.getItem("theme");
+     if (theme === "dark") {
+          document.body.classList.add("display");
+          document.getElementById("sun").classList.remove("hidden");
+          document.getElementById("moon").classList.add("hidden");
+     }
 }
 load();
 function add() {
@@ -57,10 +63,12 @@ function valid(node) {
      save();
 }
 function delet() {
-     if (!confirm("Are you sure you want to delete that reminder ?")) return;
+     const name = event.target.closest("li").querySelector(".model-remind").innerText;
+     if (!document.getElementById("multiDel").checked && !confirm(`Are you sure you want to delete "${name}" ?`)) return;
      event.target.closest("li").remove();
      save();
 }
+function multipleDelete() {}
 function resetCount() {
      if (document.querySelector("#list-ok li")) {
           alert("Please delete all the completed reminders before resetting the count.");
@@ -77,6 +85,7 @@ function displaymode() {
      const moon = document.getElementById("moon");
      sun.classList.toggle("hidden");
      moon.classList.toggle("hidden");
+     localStorage.setItem("theme", document.body.classList.contains("display") ? "dark" : "light");
      save();
 }
 function save() {
