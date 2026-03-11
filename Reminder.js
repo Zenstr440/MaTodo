@@ -14,6 +14,7 @@ function load() {
           document.body.classList.add("display");
           document.getElementById("sun").classList.remove("hidden");
           document.getElementById("moon").classList.add("hidden");
+          document.querySelector('link[rel="manifest"]').href = "manifest-dark.json";
      }
 }
 load();
@@ -68,7 +69,6 @@ function delet() {
      event.target.closest("li").remove();
      save();
 }
-function multipleDelete() {}
 function resetCount() {
      if (document.querySelector("#list-ok li")) {
           alert("Please delete all the completed reminders before resetting the count.");
@@ -87,6 +87,7 @@ function displaymode() {
      moon.classList.toggle("hidden");
      localStorage.setItem("theme", document.body.classList.contains("display") ? "dark" : "light");
      save();
+     document.querySelector('link[rel="manifest"]').href = document.body.classList.contains("display") ? "manifest-dark.json" : "manifest.json";
 }
 function save() {
      const nok = document.getElementById("list-nok").innerHTML;
@@ -95,4 +96,7 @@ function save() {
      localStorage.setItem("list-nok", nok);
      localStorage.setItem("list-ok", ok);
      localStorage.setItem("count", count);
+}
+if ("serviceWorker" in navigator) {
+     navigator.serviceWorker.register("/MaTodo/service-worker.js");
 }

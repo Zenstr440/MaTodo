@@ -1,4 +1,4 @@
-const CACHE_NAME = "matodo-pwa-cache-v2";
+const CACHE_NAME = "matodo-cache-v1";
 const urlsToCache = ["/MaTodo/", "/MaTodo/index.html", "/MaTodo/Reminder.css", "/MaTodo/Reminder.js", "/MaTodo/manifest.json"];
 
 self.addEventListener("install", (event) => {
